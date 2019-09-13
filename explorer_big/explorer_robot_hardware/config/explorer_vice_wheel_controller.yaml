@@ -1,0 +1,33 @@
+
+explorer_vice_wheel_controller:
+    type: "explorer_vice_wheel_controller/ViceWheelController"
+    joints:
+        - left_up_fin_base_joint
+        - right_up_fin_base_joint
+        - left_down_fin_base_joint
+        - right_down_fin_base_joint
+
+    reset:
+        left_up_fin_base_joint: 0.0
+        right_up_fin_base_joint: 0.0
+        left_down_fin_base_joint: 0.0
+        right_down_fin_base_joint: 0.0
+
+    left_limit:
+        left_up_fin_base_joint: -3.14
+        right_up_fin_base_joint: -3.14
+        left_down_fin_base_joint: 0.0
+        right_down_fin_base_joint: 0.0 
+
+    right_limit:
+        left_up_fin_base_joint: 0.0
+        right_up_fin_base_joint: 0.0
+        left_down_fin_base_joint: 3.14
+        right_down_fin_base_joint: 3.14
+
+    speed_limit:
+        left_up_fin_base_joint: 0.25
+        right_up_fin_base_joint: 0.25
+        left_down_fin_base_joint: 0.25
+        right_down_fin_base_joint: 0.25
+

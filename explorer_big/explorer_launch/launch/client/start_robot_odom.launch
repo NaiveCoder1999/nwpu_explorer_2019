@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- 启动陀螺仪(未来使用里程计)相关节点 -->
+<launch>
+	<node name="explorer_odometry" pkg="explorer_odometry" type="explorer_odometry" output="screen"/>
+</launch>

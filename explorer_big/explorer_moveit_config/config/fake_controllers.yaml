@@ -1,0 +1,20 @@
+controller_list:
+  - name: fake_explorer_arm_controller
+    joints:
+      - arm1_bearing_joint
+      - arm2_arm1_joint
+      - arm3_arm2_joint
+      - pt1_arm_joint
+      - pt2_pt1_joint
+      - rotate_joint
+  - name: fake_explorer_gripper_controller
+    joints:
+      - finger1_joint
+      - finger2_joint
+      - finger3_joint
+  - name: fake_explorer_vice_wheel_controller
+    joints:
+      - left_down_fin_base_joint
+      - left_up_fin_base_joint
+      - right_down_fin_base_joint
+      - right_up_fin_base_joint

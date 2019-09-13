@@ -1,0 +1,58 @@
+<launch>
+<node name="camera_back" pkg="usb_cam" type="usb_cam_node" respawn="true">
+<param name="video_device" value="/dev/videoUSB1-5"/>
+<param name="image_width" value="320"/>
+<param name="image_height" value="240"/>
+<param name="pixel_format" value="mjpeg"/>
+<param name="camera_frame_id" value="camera_back"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="30"/>
+<param name="autofocus" value="true"/>
+</node>
+
+<node name="camera_front" pkg="usb_cam" type="usb_cam_node" respawn="true">
+<param name="video_device" value="/dev/videoUSB1-6"/>
+<param name="image_width" value="320"/>
+<param name="image_height" value="240"/>
+<param name="pixel_format" value="mjpeg"/>
+<param name="camera_frame_id" value="camera_front"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="30"/>
+<param name="autofocus" value="true"/>
+</node>
+
+<node name="camera_up" pkg="usb_cam" type="usb_cam_node" respawn="true">
+<param name="video_device" value="/dev/videoUSB1-8"/>
+<param name="image_width" value="640"/>
+<param name="image_height" value="480"/>
+<param name="pixel_format" value="mjpeg"/>
+<param name="camera_frame_id" value="camera_up"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="30"/>
+<param name="autofocus" value="true"/>
+</node>
+
+<node name="camera_left" pkg="usb_cam" type="usb_cam_node" respawn="true">
+<param name="video_device" value="/dev/videoUSBhub7-2"/>
+<param name="image_width" value="320"/>
+<param name="image_height" value="240"/>
+<param name="pixel_format" value="yuyv"/>
+<param name="camera_frame_id" value="camera_left"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="30"/>
+<param name="autofocus" value="true"/>
+</node>
+
+<node name="camera_right" pkg="usb_cam" type="usb_cam_node" respawn="true">
+<param name="video_device" value="/dev/videoUSBhub7-1"/>
+<param name="image_width" value="320"/>
+<param name="image_height" value="240"/>
+<param name="pixel_format" value="yuyv"/>
+<param name="camera_frame_id" value="camera_right"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="30"/>
+<param name="autofocus" value="true"/>
+</node>
+
+</launch>
+

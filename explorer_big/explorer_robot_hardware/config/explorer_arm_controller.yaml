@@ -1,0 +1,69 @@
+
+explorer_arm_controller:
+    type: "explorer_arm_controller/ArmController"
+# 这个是机械臂的名称
+# 来自urdf
+    joints:
+      - arm1_bearing_joint     # 整体旋转
+      - arm2_arm1_joint        # 大臂前后
+      - arm3_arm2_joint        # 小臂上下
+      - pt1_arm_joint          #第一轴向
+      - pt2_pt1_joint          #上下
+      - rotate_joint           # 转爪子
+      - gripper_joint          # 爪子整体开合
+      - finger1_joint        
+      - finger2_joint        
+      - finger3_joint                   
+
+
+# 这个是机械臂的初始位置
+    reset:
+      arm1_bearing_joint: 0.0
+      arm2_arm1_joint: 0.0
+      arm3_arm2_joint: 0.0
+      pt1_arm_joint: 0.0 
+      pt2_pt1_joint: 0.0
+      rotate_joint: 0.0
+      gripper_joint: 1.57
+      finger1_joint: 0.1396
+      finger2_joint: 0.1396
+      finger3_joint: -0.1396
+# 这是机械臂的左侧位置限制
+    left_limit:
+      arm1_bearing_joint: -1.57
+      arm2_arm1_joint: -2.16
+      arm3_arm2_joint: 0.0
+      pt1_arm_joint: -1.72
+      pt2_pt1_joint: -1.81
+      rotate_joint: -1.57
+      gripper_joint: 1.53
+      finger1_joint: -0.314
+      finger2_joint: -0.1396
+      finger3_joint: -0.1396
+# 下面这些设置要与URDF中joint的limit一致//moveit need
+# (最好能改成直接读取robot_description参数的方法...但是我做不到 ps by pxq.2017)
+# 这是机械臂的右侧位置限制
+    right_limit:
+      arm1_bearing_joint: 1.57
+      arm2_arm1_joint: 0.0
+      arm3_arm2_joint: 3.14
+      pt1_arm_joint: 1.42
+      pt2_pt1_joint: 0.3
+      rotate_joint: 1.57
+      gripper_joint: 2.19
+      finger1_joint: 0.1396
+      finger2_joint: 0.314
+      finger3_joint: 0.314
+# 这个是机械臂移动的速度数据 rad/s
+    speed_limit: 
+      arm1_bearing_joint: 0.2
+      arm2_arm1_joint: 0.2
+      arm3_arm2_joint: 0.2
+      pt1_arm_joint: 0.2
+      pt2_pt1_joint: 0.2
+      rotate_joint: 3.14
+      gripper_joint: 0.2
+      finger1_joint: 0.2
+      finger2_joint: 0.2
+      finger3_joint: 0.2
+

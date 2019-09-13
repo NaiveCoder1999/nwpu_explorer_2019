@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+<node name="camera_front" pkg="usb_cam" type="usb_cam_node">
+<param name="video_device" value="/dev/videoUSB-3"/>
+<param name="image_width" value="640"/>
+<param name="image_height" value="480"/>
+<!--<param name="saturation" value="0"/>-->
+<param name="pixel_format" value="yuyv"/>
+<param name="camera_frame_id" value="camera_front"/>
+<param name="camera_info_url" value="file:///$(find explorer_launch)/launch/camera/yaml/USB100W07M.yaml"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="20"/>
+<param name="autofocus" value="true"/>
+<!--
+<remap from="/camera_behind/image_raw" to="/camera2/rgb/image_raw" />
+-->
+</node>
+<!--
+<node name="camera_behind" pkg="usb_cam" type="usb_cam_node">
+<param name="video_device" value="/dev/videoUSB-4"/>
+<param name="image_width" value="640"/>
+<param name="image_height" value="480"/>
+<param name="saturation" value="0"/>
+<param name="pixel_format" value="yuyv"/>
+<param name="camera_frame_id" value="camera_behind"/>
+<param name="camera_info_url" value="file:///$(find explorer_launch)/launch/camera/yaml/USB100W07M.yaml"/>
+<param name="io_method" value="mmap"/>
+<param name="framerate" value="20"/>
+<param name="autofocus" value="true"/>
+</node>-->
+</launch>
+

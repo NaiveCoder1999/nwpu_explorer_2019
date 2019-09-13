@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: explorer_big_arm_description
+    relative_path: urdf/explorer_big_arm_description.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/explorer_big_arm_description.srdf
+  CONFIG:
+    author_name: NaiveCoder
+    author_email: 540209474@qq.com
+    generated_timestamp: 1551876886

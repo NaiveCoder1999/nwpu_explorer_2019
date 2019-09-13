@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <remap from="object_tracker/point" to="camera/look_at" />
+  <include file="$(find hector_object_tracker)/launch/object_tracker.launch" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_tranform_rs" args="0.245 -0.1465 0.008 -3.1415 0 -1.5707 /base_link /camera_color_optical_frame 100" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_transform_left" args="0.27 0.1085 0.038 0 0 -1.5707 /base_link /camera_left 100" />
+  <!--
+  <node pkg="tf" type="static_transform_publisher" name="camera_transform_rs" args="0 0 0 -1.5707 0 -1.5707 /base_link /camera_color_optical_frame 100" />
+ <node pkg="tf" type="static_transform_publisher" name="camera_transform_right" args="0 0 0 -1.5707 0 -1.5707 /base_link /camera_right 100" />
+-->
+</launch>

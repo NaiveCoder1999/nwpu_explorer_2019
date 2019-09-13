@@ -1,0 +1,31 @@
+global_costmap:
+
+  map_type: cost_map
+  track_unknown_space: true
+  unknown_cost_value: 255
+  obstacle_range: 5.0 #2.5 障碍物探测
+  raytrace_range: 5.0 #3.0 清除障碍物
+  footprint: [[0.28, 0.35], #机器人几何参数
+              [-0.47, 0.35],
+              [-0.47, -0.35],
+              [0.28, -0.35]]
+
+  cost_scaling_factor: 2.5
+  inflation_radius: 0.7 #机器人和障碍物的最小距离
+  #transform_tolerance: 0.5
+  inscribed_radius: 0.37 #机器人内切半径
+  circumscribed_radius: 0.60 #机器人外切半径
+
+  global_frame: /map
+  robot_base_frame: /base_link
+  update_frequency: 6
+  publish_frequency: 6
+  static_map: true
+  rolling_window: false
+  
+
+  #Investigate what this actually does
+  cost_scaling_factor: 43.0
+
+
+ 
